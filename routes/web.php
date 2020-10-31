@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('index',[PostsController::class,'index'])->name('posts.index');
 
-Route::get('post',[PostsController::class,'post'])->name('posts.show');
+Route::get('post',[PostsController::class,'show'])->name('posts.show');
 
 Route::get('about',[PostsController::class,'about'])->name('posts.about');
 
