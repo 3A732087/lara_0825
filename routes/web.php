@@ -51,8 +51,10 @@ Route::get('/', function () {
     $post->content='savedcontent';
     $post->save();*/
 
-    $post=Post::find(1);
-    $post->delete();
+   /* $post=Post::find(1);
+    $post->delete();*/
+
+    Post::destroy(2);
 
 
 
