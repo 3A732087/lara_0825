@@ -23,11 +23,16 @@ Route::get('/', function () {
         'content',
         'is_feature'
     ];*/
-
+/*
     $post=new Post();
     $post->title='testtitle';
     $post->content='testcontent';
     $post->save();
+*/
+
+    $post=\App\Models\Post::all();
+    dd($post);
+
 
 });
 
