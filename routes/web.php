@@ -30,9 +30,11 @@ Route::get('/', function () {
     $post->save();
 */
 
-    $post=\App\Models\Post::all();
-    dd($post);
+ /*   $post=\App\Models\Post::all();
+    dd($post);*/
 
+    $post=Post::find(1);
+    dd($post);
 
 });
 
