@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostsController;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+   // return view('welcome');
+
+    /* protected$fillable=[
+        'title',
+        'content',
+        'is_feature'
+    ];*/
+
+    $post=new Post();
+    $post->title='testtitle';
+    $post->content='testcontent';
+    $post->save();
+
 });
 
 Route::get('index',[PostsController::class,'index'])->name('posts.index');
